@@ -1,0 +1,669 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.nav{
+    height: 85px;
+    background-color: black;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.nav a{
+    color: white;
+    font-weight: 260;
+}
+
+.logo {
+   position: absolute;
+   left: 21px;
+   width: 80px;
+}
+
+/* Home section */
+.home .col-md-6{
+    height: auto;
+    min-height: 400px;
+    padding: 40px 20px;
+}
+
+.first h1{
+    padding-top: 80px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    padding-left: 40px;
+}
+
+.hu__hu__ { animation: hu__hu__ infinite 2s ease-in-out }
+@keyframes hu__hu__ {
+    50% { transform: translateY(30px) }
+}
+
+.first h4{
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 250;
+    color: white;
+    padding-left: 40px;
+}
+
+.home .first .btn{
+    width: 100px;
+    background-color: rgb(227, 133, 10);
+    margin-left: 40px;
+    color: white;
+}
+
+/* Moving content */
+.content{
+    height: 90px;
+    background-color: rgb(251, 251, 6);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.content marquee{
+    font-weight: 800;
+    padding-left: 40px;
+    letter-spacing: 1px;
+    font-size: 22px;
+    width: 100%;
+}
+
+/* Deal section */
+.deal{
+    background-color: black;
+    color: white;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.main-grid {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.main-grid .child img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-grid .child{
+    padding: 5px;
+    height: auto;
+}
+
+.deal .deal1{
+    margin-top: 5%;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .deal .deal1 {
+        padding-left: 50px;
+    }
+}
+
+.deal .deal2{
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.deal .deal1 h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.deal .deal1 h6{
+    margin-top: 10px;
+}
+
+.deal .deal1 .btn{
+    background-color: rgb(227, 133, 10);
+    z-index: 2;
+}
+
+/* Button animations */
+.btn-wobble:hover {
+    animation: wobble 0.8s;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: translateX(0%); }
+    15% { transform: translateX(-25%) rotate(-5deg); }
+    30% { transform: translateX(20%) rotate(3deg); }
+    45% { transform: translateX(-15%) rotate(-3deg); }
+    60% { transform: translateX(10%) rotate(2deg); }
+    75% { transform: translateX(-5%) rotate(-1deg); }
+}
+
+.btn-pulse {
+    animation: pulse 1.5s infinite;
+}
+  
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+  
+.btn-rotate-3d {
+    background-color: #f39c12;
+    color: white;
+    perspective: 300px;
+    transform-style: preserve-3d;
+}
+  
+.btn-rotate-3d:hover {
+    animation: rotate3d 0.7s;
+}
+  
+@keyframes rotate3d {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(180deg); }
+    100% { transform: rotateX(360deg); }
+}
+
+/* Child elements hover effect */
+.child {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child img {
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    width: 100%;
+}
+
+.child:hover img {
+    transform: scale(1.2);
+}
+
+/* Specifications section */
+.main-spec .first-row{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-spec{
+    width: 100%;
+    height: auto;
+    padding: 50px 15px;
+    background-color: white;
+}
+
+.main-spec .childs {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-spec h1{
+    font-weight: 1000;
+    color: rgb(190, 127, 10);
+    font-size: 2.5rem;
+}
+
+.main-spec h6{
+    font-weight: 700;
+}
+
+.images img{
+    height: 50px;
+}
+
+/* Items section */
+.contain{
+    background: black;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.contain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15px;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgb(3, 3, 3) 0px, rgb(6, 6, 6) 10px,
+        transparent 10px, transparent 20px
+    );
+}
+
+.items{
+    background-color: rgb(199, 27, 27);
+    margin: 0;
+}
+
+.items img{
+    width: 100%;
+    height: auto;
+}
+
+.contain h5{
+    font-weight: 750;
+    padding-left: 20px;
+    color: #f39c12;
+}
+
+.contain p{
+    font-weight: 300;
+    font-size: small;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contain span {
+    position: absolute;
+    right: 20px;
+    font-size: large;
+}
+
+.contain h1{
+    font-weight: 800;
+    font-size: 2.5rem;
+    padding-left: 20px;
+    margin-bottom: 45px;
+    margin-top: 20px;
+}
+
+/* Heading section */
+.heading{
+    width: 100%;
+    height: auto;
+    padding: 40px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #f39c12;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Scrolling images */
+.scrol-bar {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: rgb(230, 227, 227);
+    padding: 10px 0;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 15s linear infinite;
+    width: max-content;
+}
+
+.scroll-container.reverse {
+    animation: scroll-right 15s linear infinite;
+}
+
+.scroll-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+/* Mobile section */
+.mobile-section{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    padding: 40px 15px;
+    position: relative;
+}
+
+.mobile-section .view {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-section .view .img1,
+.mobile-section .view .img2 {
+    position: relative;
+    height: auto;
+    max-height: 520px;
+    max-width: 250px;
+    width: 45%;
+    border: 3px solid rgb(124, 122, 122);
+    border-radius: 25px;
+    margin: 20px 10px;
+}
+
+.mobile-section .view .img2 {
+    z-index: 3;
+}
+
+.mobile-section .heading h1{
+    color: white;
+    margin-top: 40px;
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.mobile-section .heading img{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 150px;
+    max-width: 100%;
+}
+
+/* About section */
+.para p{
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0 15px 20px;
+    padding: 15px;
+}
+
+.head h2{
+    margin: 30px 15px;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+/* Beverages section */
+.beverages{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.beverages img{
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+}
+
+.beverages h1{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.columns {
+    padding: 0 15px;
+}
+
+.columns h4{
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.columns p{
+    font-weight: 300;
+    margin-bottom: 18px;
+}
+
+/* Carousel */
+#carouselExampleInterval {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#carouselExampleInterval .carousel-item img {
+    height: auto;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Message section */
+.msg-section {
+    height: auto;
+    padding: 40px 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.msg-section h1{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+/* Fade in animation */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.home .btn, .home h1, .home h4 {
+    animation: fadeInLeft 1s ease-out;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 40px 15px;
+    background-color: black;
+    color: white;
+}
+
+.footer .first img{
+    width: 80px;
+}
+
+.footer img{
+    width: 160px;
+    max-width: 100%;
+}
+
+.footer .right {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.footer .right a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .first h1 {
+        padding-top: 40px;
+        font-size: 2.5rem;
+    }
+    
+    .contain span {
+        position: static;
+        display: block;
+        text-align: right;
+        margin-top: -20px;
+    }
+    
+    .main-spec {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home .col-md-6 {
+        min-height: 300px;
+    }
+    
+    .first h1 {
+        font-size: 2rem;
+        padding-left: 20px;
+    }
+    
+    .first h4 {
+        padding-left: 20px;
+    }
+    
+    .deal .deal1 h1 {
+        font-size: 2rem;
+    }
+    
+    .contain h1 {
+        font-size: 2rem;
+    }
+    
+    .beverages h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .first h1 {
+        font-size: 1.8rem;
+    }
+    
+    .mobile-section .view .img1,
+    .mobile-section .view .img2 {
+        position: relative;
+        left: auto;
+        right: auto;
+        margin: 10px auto;
+    }
+    
+    .mobile-section .heading h1 {
+        font-size: 1.5rem;
+    }
+    
+    .head h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* alignments */
+/* For navigation bar */
+.nav {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* For footer section */
+  .footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Ensure all container-fluid elements take full width */
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* For map section */
+  .maps {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* For carousel section */
+  .carousel {
+    width: 100% !important;
+  }
+  
+  /* For mobile section */
+  .mobile-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* For about section row */
+  .row {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* For beverages section */
+  .beverages {
+    width: 100% !important;
+  }
+  
+  /* For heading section */
+  .heading {
+    width: 100% !important;
+  }
+  
+  /* For message section */
+  .msg-section {
+    width: 100% !important;
+  }
